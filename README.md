@@ -159,6 +159,7 @@ AX_study/
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-02 | **팀별 진행표 — 출판팀 · FC팀 추가, 「팀별로 지금 할 수 있는 것」 삭제 (사용자).** 새 두 팀은 예정 · 차수 없음. 할 수 있는 것 판정(`CAPS`) · AI 분석 버튼 · `sample` capability 를 같이 뺐다. 기존 팀 차수 기록은 그대로 |
 | 2026-11-02 | **advance 1step 가이드 v2.23 (사용자).** 8단계 끝 접힌 카드 「작업 마무리를 스킬로 — /wrap-up」 = 문서 업데이트 vs 커밋 · push 표 · SKILL.md 내용 그대로 붙인 만들기 프롬프트(워크스페이스 `.claude/skills/wrap-up` · `disable-model-invocation: true`) · 줄마다 이유. 강사 PC 실측 2건(코드만 = 커밋 · push / `.env` 섞임 = 점검에서 멈춤) 통과 — `claude -p` 에 stdin 파이프로 넣으면 스킬을 못 찾는 경우가 있어 인자로 넣어 잼. 백업 `archive/advance_1step_guide.src.html.261102.bak` |
 | 2026-11-02 | **basic 2step 가이드 v1.30 (사용자).** `#playwright` 주의 상자(로그인 남음 · --isolated) · 막히면 상자 삭제 → 접힌 카드 「매일 반복할 일이면: Playwright 스크립트 설치」(MCP vs 스크립트 비교표 · pip 설치 프롬프트). 백업 `archive/basic_2step_guide.src.html.261102b.bak` |
 | 2026-11-02 | **basic 2step 가이드 v1.29 (사용자).** `#playwright` 설치 프롬프트 = PowerShell 로 · `-s user` · Node 18 이상 · 실패 시 오류 그대로 멈춤 · Failed 면 재확인 · 재시작 뒤 `/mcp`. 준비에 크롬 · 허락 창 · `.playwright-mcp` 폴더 팁. 강사 PC 실측(2.1.316 · Node 24) 설치 Connected · example.com 시험 통과. 백업 `archive/basic_2step_guide.src.html.261102.bak` |
