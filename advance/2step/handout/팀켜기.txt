@@ -1,0 +1,23 @@
+에이전트 팀 켜기 · 끄기 (advance 2step 10단계)
+
+에이전트 팀은 실험 기능이라 기본으로 꺼져 있습니다.
+전역 설정이 아니라 basic_data 폴더 안에서만 켭니다. 출근표(claude -p)로 도는 AI 직원에게는 붙이지 않습니다.
+
+[켜기]
+1. basic_data 폴더에 .claude\settings.local.json 파일을 엽니다. 없으면 새로 만듭니다.
+2. 파일이 비어 있으면 아래를 그대로 붙여넣습니다.
+
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+
+   이미 내용이 있으면 손으로 합치지 말고 Claude Code 에 이렇게 말합니다.
+   「.claude/settings.local.json 의 env 에 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS 를 "1" 로 넣어 줘. 다른 설정은 건드리지 마」
+
+3. 저장하고 Claude Code 를 껐다 켭니다 (exit 입력 후 다시 claude).
+
+[끄기] 2step이 끝나면 꼭 끕니다
+- "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1" 줄을 지우고 저장한 뒤 Claude Code 를 다시 켭니다.
+- 켜 둔 채로 두면 평소에 부탁한 일도 팀원으로 나뉘어 돌 수 있고, 사용량이 빨리 닳습니다.

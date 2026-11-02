@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "basic-trial-demo sub",
+      "type": "process",
+      "command": "C:/Users/User/.local/bin/claude.exe",
+      "args": ["/basic-trial-demo sub"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": { "reveal": "always", "focus": true, "panel": "dedicated" },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+ {
+  "file": "t0_01.png",
+  "tab": "진행순",
+  "order": 1,
+  "paragraph": "https://nodejs.org/ko -> 위 메뉴 중 ‘다운로드’ 클릭 ->  선택 ->  -> 설치 진행",
+  "object_id": "kix.rya8l0a4q2f1",
+  "bytes": 2642
+ },
+ {
+  "file": "t0_02.png",
+  "tab": "진행순",
+  "order": 2,
+  "paragraph": "https://nodejs.org/ko -> 위 메뉴 중 ‘다운로드’ 클릭 ->  선택 ->  -> 설치 진행",
+  "object_id": "kix.vuslb6a5i5ab",
+  "bytes": 4902
+ },
+ {
+  "file": "t0_03.png",
+  "tab": "진행순",
+  "order": 3,
+  "paragraph": "",
+  "object_id": "kix.qy6zztvgz4bm",
+  "bytes": 22555
+ },
+ {
+  "file": "t0_04.png",
+  "tab": "진행순",
+  "order": 4,
+  "paragraph": "",
+  "object_id": "kix.9zn59abgkbwl",
+  "bytes": 26182
+ },
+ {
+  "file": "t0_05.png",
+  "tab": "진행순",
+  "order": 5,
+  "paragraph": "한글:",
+  "object_id": "kix.nfcuntixr2uh",
+  "bytes": 22222
+ },
+ {
+  "file": "t0_06.png",
+  "tab": "진행순",
+  "order": 6,
+  "paragraph": "테스트서버:",
+  "object_id": "kix.lprt8bryyjb2",
+  "bytes": 16054
+ },
+ {
+  "file": "t0_07.png",
+  "tab": "진행순",
+  "order": 7,
+  "paragraph": "클로드코드:",
+  "object_id": "kix.np68bgx62mz4",
+  "bytes": 28108
+ },
+ {
+  "file": "t0_08.png",
+  "tab": "진행순",
+  "order": 8,
+  "paragraph": "하얀색 부분 드래그 -> 우클릭",
+  "object_id": "kix.sqwippjwwprv",
+  "bytes": 249842
+ }
+]

@@ -1,0 +1,1 @@
+Read,Glob,Grep,Agent,Edit(./리포트/**),Edit(./ai_staff/작업/**),Bash(node:*),PowerShell(node:*)

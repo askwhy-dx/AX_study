@@ -1,0 +1,48 @@
+{
+  "courses": {
+    "starter-1step": {
+      "dir": "starter/1step",
+      "file": "CLAUDE_starter_1step_가이드.html",
+      "remote": "ax_study/claude-code-setup-guide.html",
+      "label": "starter 1step"
+    },
+    "starter-2step": {
+      "dir": "starter/2step",
+      "file": "CLAUDE_starter_2step_가이드.html",
+      "remote": "ax_study/claude-code-build-app.html",
+      "label": "starter 2step"
+    },
+    "basic-1step": {
+      "dir": "basic/1step",
+      "file": "CLAUDE_basic_1step_가이드.html",
+      "remote": "ax_study/claude-code-skills-agents.html",
+      "label": "basic 1step"
+    },
+    "basic-2step": {
+      "dir": "basic/2step",
+      "file": "CLAUDE_basic_2step_가이드.html",
+      "remote": "ax_study/claude-code-external-data.html",
+      "label": "basic 2step"
+    },
+    "advance-1step": {
+      "dir": "advance/1step",
+      "file": "CLAUDE_advance_1step_가이드.html",
+      "remote": "ax_study/claude-code-automation.html",
+      "label": "advance 1step"
+    },
+    "advance-2step": {
+      "dir": "advance/2step",
+      "file": "CLAUDE_advance_2step_가이드.html",
+      "remote": "ax_study/claude-code-agent-team.html",
+      "label": "advance 2step"
+    }
+  },
+  "aliases": {
+    "starter": "starter-1step",
+    "trial": "starter-2step",
+    "basic": "basic-1step",
+    "basicdata": "basic-2step",
+    "advedu": "advance-1step",
+    "basictrial": "advance-2step"
+  }
+}
