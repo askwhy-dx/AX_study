@@ -159,6 +159,7 @@ AX_study/
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-04 | **basic 2step 가이드 v1.31 (사용자).** 페이지 맨 위(`<main>` 첫 줄) 「먼저 보기」 상자 = API · MCP 설명 영상 링크(YouTube Data API 로 고름 · 소소한 AI 입문노트 「MCP vs API 뭐가 다른데?」 26-10-31 · `&t=93s` = 1:33 부터). 백업 `archive/CLAUDE_basic_2step_가이드.html.261104.bak` |
 | 2026-11-02 | **팀별 진행표 — 출판팀 · FC팀 추가, 「팀별로 지금 할 수 있는 것」 삭제 (사용자).** 새 두 팀은 예정 · 차수 없음. 할 수 있는 것 판정(`CAPS`) · AI 분석 버튼 · `sample` capability 를 같이 뺐다. 기존 팀 차수 기록은 그대로 |
 | 2026-11-02 | **advance 1step 가이드 v2.23 (사용자).** 8단계 끝 접힌 카드 「작업 마무리를 스킬로 — /wrap-up」 = 문서 업데이트 vs 커밋 · push 표 · SKILL.md 내용 그대로 붙인 만들기 프롬프트(워크스페이스 `.claude/skills/wrap-up` · `disable-model-invocation: true`) · 줄마다 이유. 강사 PC 실측 2건(코드만 = 커밋 · push / `.env` 섞임 = 점검에서 멈춤) 통과 — `claude -p` 에 stdin 파이프로 넣으면 스킬을 못 찾는 경우가 있어 인자로 넣어 잼. 백업 `archive/advance_1step_guide.src.html.261102.bak` |
 | 2026-11-02 | **basic 2step 가이드 v1.30 (사용자).** `#playwright` 주의 상자(로그인 남음 · --isolated) · 막히면 상자 삭제 → 접힌 카드 「매일 반복할 일이면: Playwright 스크립트 설치」(MCP vs 스크립트 비교표 · pip 설치 프롬프트). 백업 `archive/basic_2step_guide.src.html.261102b.bak` |
