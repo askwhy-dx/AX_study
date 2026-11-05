@@ -14,6 +14,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - 공유 드라이브의 starter 2step 폴더 이름은 `2step`, basic 준비물 폴더 이름은 `basic` 이며 하위 단계는 `1step` · `2step` 이다. 기존 파일 ID 와 공유 권한을 유지한다.
 - starter 2step 은 한 과정이다. 별도 선택 과정이나 중간 하위 폴더를 만들지 않는다.
 - `master/research/` : 준비 중인 master 참고 자료. 아직 master 가이드는 없다.
+- **(11-05 사용자 확정) advance 2step · master 구성의 정본 = 기획서** `advance/2step/advance_2step_기획.html` · `master/1step/master_1step_기획.html` · `master/2step/master_2step_기획.html` (HTML 만 · 직접 고친다). advance 2step = 팀 꾸리기(에이전트 정의 · 서브 · 에이전트 팀 · 판단표) · master 1step = 스스로 지키기(Auto Memory · 훅 · 하네스 · 루프) · master 2step = 팀에 퍼뜨리기(플러그인 · 모드 · 유삐 같은 슬랙 봇). **확정 구성에 없는 스택과 권한 · 보안은 교육과정에서 제외한다** — `claude -p` 무인 실행 · 스케줄러 출근표 · 결근 대비 · 룰 · 허용 목록 · Supabase · Playwright 테스트 · 카카오 PlayMCP · 그래프 엔지니어링을 다시 넣지 않는다. advance 2step 가이드 = **v3.0(11-05 · 팀 꾸리기 5단계 · 진행 체크 키 `cc-adv-trial-steps-v2`)** · handout 정답 = `정답_리포트담당.md`(업무 지시서 칸 포함) · `정답_jig-metrics` · `팀켜기.txt` 만(무인 실행 정답 3개는 `archive/advance_2step_*.261105.bak`) · ⚠️ 2 · 3단계 카드 실측 전.
 - 가이드 안 PART · 단계 번호 · 앵커 · 진행 체크 저장 키는 명칭 변경만으로 바꾸지 않는다.
 - (11-01 사용자) basic 1step · advance 2step 의 스킬 · 에이전트 위치 = **워크스페이스 폴더(basic_data 바로 위)의 `.claude`**. 워크스페이스 이름은 교육생마다 달라 가이드에 `claude_work` 같은 폴더 이름 · 예시를 쓰지 않는다 — 「basic_data 바로 위 폴더」 · 「워크스페이스의 `.claude\…`」로 적는다. 팀 플래그 `settings.local.json` 은 basic_data 에 둔다.
 - 빌드·발행 경로의 기준은 `tools/courses.json` 이다. 표준 인자는 `starter-1step`, `starter-2step`, `basic-1step`, `basic-2step`, `advance-1step`, `advance-2step` 이다. 이전 도구 인자는 호환용 별칭으로만 지원한다.
@@ -36,9 +37,9 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
     `AX_source/tools/pdfdoc.py` 를 빌려 쓴다 — 같은 회사 문서로 보이게 하려는 것이라 **CSS 를 따로 들지 않는다.**
     표가 페이지 경계에서 쪼개지지 않게 하는 한 줄만 md2pdf 쪽에서 덮는다. PDF 옆에 HTML 도 남는다.
 - 루트 : README.md, CLAUDE.md 만 둔다. **예외: `AX_과정별_기술스택.xlsx`**(09-29 사용자가 AX_study 에 두라고 지시).
-  **과정 키워드(10-13 사용자 확정 · 10-22 advance 교체 · 기술스택표 8행)**: starter 설치와 규칙 / 만들기와 배포 · basic 기준과 담당 / 수집과 공유 · advance 자동화 / 직원 만들기 · master 규칙 · 규정 / 권한과 협업 (1step / 2step). 키워드는 확정, advance · master 세부 구성은 아직 **제안**이다. 생성 스크립트는 남기지 않았다 — 엑셀에서 직접 고친다. basic 칸은 `basic/1step/basic_1step_기획.html` · `basic/2step/basic_2step_기획.html` 과 맞춰 둔다(기획서가 정본).
-  ⚠️ 논의에서 뺀 것을 되살리지 않는다: 검산기 · Python 데이터 처리 · 기획 문서화 · 팀 스킬 배포 · 플러그인/사내 마켓플레이스 · MCP 서버 만들기 · Agent SDK · n8n(사용 안 함) · 사내 강사.
-  예외(09-29 사용자 지시): basic 1step 마지막에 **superpowers 의 brainstorming 스킬 하나만** 수정본으로 준다. 플러그인 전체 · 플러그인 일반은 여전히 넣지 않는다.
+  **과정 키워드(10-13 사용자 확정 · 11-05 advance 2step · master 교체 · 기술스택표 8행)**: starter 설치와 규칙 / 만들기와 배포 · basic 기준과 담당 / 수집과 공유 · advance 자동화 / 팀 꾸리기 · master 스스로 지키기 / 팀에 퍼뜨리기 (1step / 2step). 키워드 · 구성 확정(11-05) — 세부는 각 기획서가 정본. 엑셀 · 진행표 `COURSES` 도 11-05 새 구성으로 맞췄다(진행표 a-x 옛 키 0·5·6·7 → 새 1·2·3·4, 1~4 = 제외 항목이라 삭제). 생성 스크립트는 남기지 않았다 — 엑셀에서 직접 고친다. basic 칸은 `basic/1step/basic_1step_기획.html` · `basic/2step/basic_2step_기획.html` 과 맞춰 둔다(기획서가 정본).
+  ⚠️ 논의에서 뺀 것을 되살리지 않는다: 검산기 · Python 데이터 처리 · 기획 문서화 · MCP 서버 만들기 · Agent SDK · n8n(사용 안 함) · 사내 강사. (11-05 사용자: 플러그인 · 마켓플레이스로 하네스를 팀에 배포하는 것은 master 2step 확정 범위라 이 목록에서 뺐다)
+  예외(09-29 사용자 지시): basic 1step 마지막에 **superpowers 의 brainstorming 스킬 하나만** 수정본으로 준다. basic 에는 플러그인 전체 · 플러그인 일반을 넣지 않는다(플러그인은 master 2step).
 - **팀별 진행표 = Claude 아티팩트** https://claude.ai/artifact/WaJxr9BKNQHLMauhyvu9jJ (10-22 · 로컬 원본 없음 — 고칠 땐 `Artifact read` 로 라이브 판을 받아 그 위에서 고친다). 팀원 체크는 **사용자가 직접**(에이전트는 화면 · 기능만 고친다).
   - 데이터 = 페이지 안 `<script id="state">` JSON(`teams[].sessions[] = {date, done, items[]}`). 체크하면 페이지가 스스로 새 버전을 게시한다(capability `artifact`) → **고쳐 올리기 직전에 반드시 라이브 판을 다시 읽고 state 를 옮겨 붙인다**(10-22 병합 실패한 채 게시돼 사용자 편집이 한 번 덮였다 · 바로 복구).
   - ⚠️ 항목 키 = `과정키.번호`(예 `a-x.2`) — **번호 기반**이라 기술스택 항목의 순서 · 개수를 바꾸면 기존 체크가 엉뚱한 항목으로 간다. 바꿀 땐 옛 키 → 새 키 대응표로 state 를 옮긴다(10-22 advance 재편 때 그렇게 함). 이름만 바꾸는 건 안전.
