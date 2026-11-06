@@ -6,8 +6,8 @@
 |---|---|---|---|
 | **starter** | 첫 설정 · 설치와 규칙 | 사내 웹 앱 만들기와 배포 | 가이드 v1.25 · v1.15 |
 | **basic** | 스킬과 에이전트 · 기준과 담당 | 외부 데이터 연결 · 수집과 공유 | 가이드 v1.10 · v1.30 |
-| **advance** | 자동화 | AI 직원 만들기 | 가이드 v2.22 · v2.21 |
-| **master** | 규칙 · 규정 | 권한과 협업 | 준비 중 |
+| **advance** | 자동화 | 팀 꾸리기 | 가이드 v2.23 · v3.2 |
+| **master** | 스스로 지키기 | 팀에 퍼뜨리기 | 가이드 v1.0 · v1.0 |
 
 starter 2step 은 웹 앱 과정 하나로 운영합니다. 교육생에게는 해당 단계의 `handout/` 파일과 공개 가이드 링크를 나눠 줍니다.
 
@@ -23,6 +23,8 @@ starter 2step 은 웹 앱 과정 하나로 운영합니다. 교육생에게는 �
 | basic 2step 가이드 | `basic/2step/handout/CLAUDE_basic_2step_가이드.html` |
 | advance 1step 가이드 | `advance/1step/handout/CLAUDE_advance_1step_가이드.html` |
 | advance 2step 가이드 | `advance/2step/handout/CLAUDE_advance_2step_가이드.html` |
+| master 1step 가이드 | `master/1step/handout/CLAUDE_master_1step_가이드.html` (공개 `ax_study/claude-code-self-guard.html`) |
+| master 2step 가이드 | `master/2step/handout/CLAUDE_master_2step_가이드.html` (공개 `ax_study/claude-code-team-share.html`) |
 | starter 1step 순서 안내 | `starter/1step/handout/CLAUDE_starter_1step_순서.txt` |
 | starter 2step 기획서 | `starter/2step/starter_2step_기획.md` · `.html` · `.pdf` |
 | basic 기획서 | `basic/1step/basic_1step_기획.html` · `basic/2step/basic_2step_기획.html` |
@@ -159,6 +161,9 @@ AX_study/
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-06 | **starter 1step 가이드 v1.26 — PART 7 「다음 단계」 삭제 (사용자).** 다음 과정 미리 보기 표를 통째로 지웠다(다른 PART 번호는 그대로). 표 안에 있던 「화면 기준」 각주는 PART 5 끝으로 옮겼다. 재발행. |
+| 2026-11-06 | **master handout 드라이브 게시 · advance 2step 가이드 버그 수정 · AX_source 기획서 발행 (사용자).** `upload_basic_handout.py` 가 `master/1step` · `master/2step` 도 받게 해 드라이브 AI-AX-Study › master › 1step(3개) · 2step(10개)에 올림. advance 2step `guide.src.html` 의 정규식 찌꺼기 `\1` · `\2` 3곳 복구(4단계 「팀 회의」 항목 · 복사 상자 · PART 4 막혔을 때 섹션) → 재발행. AX_source 20261116 · 20261123 기획서 PDF 발행(`--plan`). |
+| 2026-11-06 | **master 1step · 2step 가이드 v1.0 첫 발행 (사용자).** master 2step 순서를 **슬랙 봇 → 플러그인 → 모드**로 바꾸고(1 · 2 봇 · 3~5 플러그인 · 6 · 7 상태줄 · `/cs-report`) 1step(기억 · 훅 · 하네스 · 루프 8단계)과 함께 가이드로 만듦. 소재 = advance 2step 의 가상 학부모 문의(`cs_practice`). 받을 파일 = 1step `정답_훅`(가짜 입력 9건 통과) · 2step `정답_봇` · `정답_플러그인`(`claude plugin validate` 통과) · `정답_커맨드`. `courses.json` 에 `master-1step` · `master-2step` 추가. 기획서 2편 · AX_source 회차 20261116 · 20261123 `회차유형.json` 맞춤. ⚠️ 카드 실측 전 · handout 드라이브 업로드 전 |
 | 2026-11-05 | **advance 2step 가이드 v3.2 — 실습 소재 교체 (사용자 · D안).** 직영 리포트 → 가상 학부모 문의 15건 답변. 2단계 응대 담당 `cs-reply` 만들기 · 3단계 옛 판 규정으로 쓴 답변을 검산 담당이 잡기(문의 4 · 9 · 13) · 4단계 replier · policy · parent 팀. handout = `cs_practice/`(문의 · 현행 규정 · 옛 판 규정) · `정답_응대담당.md` · `정답표_문의답변.txt` · `팀켜기.txt`. 기획서 같이 고침 · 단계 번호 · 진행 체크 키 그대로 · 옛 파일 `archive/advance_2step_data소재.261105/` · 카드 실측 · 시연 폴더 · 드라이브 업로드 남음 |
 | 2026-11-05 | **advance 2step 가이드 v3.1 (사용자).** 시작 전 「일을 나누는 세 가지」 = 회사 비유 표 → 포스터 검토 비유 표(싱글 · 서브 · 팀) + 실습 연결 한 줄 · 사용량 상자 삭제 · 5단계 방법 · 확인 · 숙제 · 주의 삭제 → 「어떤 업무를 맡기면 좋을까」 표(싱글 · 서브 · 팀별 맞는 업무 · 예시 · 맞지 않는 업무). 발행 완료 · 단계 번호 · 진행 체크 키 그대로 · 백업 `archive/adv2_guide.src.html.261105.bak` |
 | 2026-11-04 | **basic 2step 가이드 v1.31 (사용자).** 페이지 맨 위(`<main>` 첫 줄) 「먼저 보기」 상자 = API · MCP 설명 영상 링크(YouTube Data API 로 고름 · 소소한 AI 입문노트 「MCP vs API 뭐가 다른데?」 26-10-31 · `&t=93s` = 1:33 부터). 백업 `archive/CLAUDE_basic_2step_가이드.html.261104.bak` |

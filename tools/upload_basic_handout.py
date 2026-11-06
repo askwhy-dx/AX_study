@@ -1,5 +1,6 @@
 """basic 준비물을 공유 드라이브 폴더에 올린다.
-python upload_basic_handout.py 1step|2step dry|apply
+python upload_basic_handout.py 1step|2step|master/1step|master/2step dry|apply
+(11-06) master/<편> = master/<편>/handout → 드라이브 AI-AX-Study › master › <편> (폴더 없으면 만든다).
 basic/<편>/handout 의 파일(가이드 HTML 제외)을 드라이브 「basic 준비물」/<편> 폴더에 올린다. 하위 폴더도 같은 이름으로 만든다.
 같은 이름이 있으면 내용만 교체(파일 ID·링크 유지), 없으면 새로 만든다. 같은 이름이 2개 이상이면 중단. 지우지는 않는다."""
 import sys, os, hashlib, mimetypes
@@ -9,7 +10,8 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 PART, MODE = sys.argv[1], sys.argv[2]
 FOLDERS = {'1step': '1_0a_3rQuD0yoqAoIC86uu6qRs3mIYHQ3', '2step': '1V-yySFJ26WKeJuyjlbZ1qwntdBPH8zng'}  # 상위 1JOGuo57D-ZtolZSu_FaJiaizTN48mi_g (도메인 편집 권한)
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'basic', PART, 'handout')
+MASTER = '1G75cKA55do3K9pXd3pLEr3J4HcPmrT9Y'  # AI-AX-Study › master
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', *(PART.split('/') if '/' in PART else ['basic', PART]), 'handout')
 TOP, REF = {'열사전.txt', '직영_실습데이터.csv'}, '참고자료'  # 1step 드라이브 배치 (로컬 handout 은 평평한 그대로)
 MIME = {'.csv': 'text/csv', '.txt': 'text/plain', '.md': 'text/markdown', '': 'text/plain'}
 d = build('drive', 'v3', credentials=get_credentials())
@@ -33,6 +35,9 @@ def folder_id(parent, name):
         return None
     return d.files().create(body={'name': name, 'parents': [parent], 'mimeType': 'application/vnd.google-apps.folder'}, fields='id', supportsAllDrives=True).execute()['id']
 
+
+if PART.startswith('master/'):
+    FOLDERS[PART] = folder_id(MASTER, PART.split('/')[1])
 
 for base, dirs, files in os.walk(ROOT):
     rel = os.path.relpath(base, ROOT)

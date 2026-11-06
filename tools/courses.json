@@ -35,6 +35,18 @@
       "file": "CLAUDE_advance_2step_가이드.html",
       "remote": "ax_study/claude-code-agent-team.html",
       "label": "advance 2step"
+    },
+    "master-1step": {
+      "dir": "master/1step",
+      "file": "CLAUDE_master_1step_가이드.html",
+      "remote": "ax_study/claude-code-self-guard.html",
+      "label": "master 1step"
+    },
+    "master-2step": {
+      "dir": "master/2step",
+      "file": "CLAUDE_master_2step_가이드.html",
+      "remote": "ax_study/claude-code-team-share.html",
+      "label": "master 2step"
     }
   },
   "aliases": {

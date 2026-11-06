@@ -1,0 +1,14 @@
+{
+  "name": "cs-harness-market",
+  "owner": {
+    "name": "<내 GitHub 아이디>"
+  },
+  "description": "우리 팀 학부모 문의 응대 하네스 모음 (교육용 비공개)",
+  "plugins": [
+    {
+      "name": "cs-harness",
+      "source": "./plugins/cs-harness",
+      "description": "학부모 문의 응대 하네스 (cs-reply · 원본 보호 · 비밀정보 검사 · 슬랙 보고)"
+    }
+  ]
+}

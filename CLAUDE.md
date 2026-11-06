@@ -13,11 +13,12 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - starter 2step 진행자 문서: https://docs.google.com/document/d/16VqrcWI4fmoNcRZdRaxqP6b2aoniH_0oJREXNFhU3g0/edit (비공개 · 공유를 추가하지 않는다). 사람이 편집한 내용이 있으므로 문서 전체를 로컬 원고로 덮어쓰지 않고, 최신 revisionId 를 확인해 해당 구간만 수정한다.
 - 공유 드라이브의 starter 2step 폴더 이름은 `2step`, basic 준비물 폴더 이름은 `basic` 이며 하위 단계는 `1step` · `2step` 이다. 기존 파일 ID 와 공유 권한을 유지한다.
 - starter 2step 은 한 과정이다. 별도 선택 과정이나 중간 하위 폴더를 만들지 않는다.
-- `master/research/` : 준비 중인 master 참고 자료. 아직 master 가이드는 없다.
-- **(11-05 사용자 확정) advance 2step · master 구성의 정본 = 기획서** `advance/2step/advance_2step_기획.html` · `master/1step/master_1step_기획.html` · `master/2step/master_2step_기획.html` (HTML 만 · 직접 고친다). advance 2step = 팀 꾸리기(에이전트 정의 · 서브 · 에이전트 팀 · 판단표) · master 1step = 스스로 지키기(Auto Memory · 훅 · 하네스 · 루프) · master 2step = 팀에 퍼뜨리기(플러그인 · 모드 · 유삐 같은 슬랙 봇). **확정 구성에 없는 스택과 권한 · 보안은 교육과정에서 제외한다** — `claude -p` 무인 실행 · 스케줄러 출근표 · 결근 대비 · 룰 · 허용 목록 · Supabase · Playwright 테스트 · 카카오 PlayMCP · 그래프 엔지니어링을 다시 넣지 않는다. advance 2step 가이드 = **v3.2(11-05 · 팀 꾸리기 5단계 · 진행 체크 키 `cc-adv-trial-steps-v2`) · 실습 소재 = 가상 학부모 문의 15건 답변(11-05 사용자 D안 · 직영 리포트 소재 폐지)** · 실습 폴더 `cs_practice`(워크스페이스 바로 아래 · `문의.txt` · `응대규정.md` · `응대규정_옛판.md`) · 에이전트 `cs-reply` · 3 · 4단계 오류 = 옛 판 규정 → 문의 4 · 9 · 13 만 틀림(세 조항만 다르게 짰다 · 문의를 고치면 정답표 대조부터) · handout 정답 = `정답_응대담당.md` · `정답표_문의답변.txt`(**실습 폴더 밖** = 에이전트가 못 읽게) · `팀켜기.txt` · 옛 직영 소재 파일 = `archive/advance_2step_data소재.261105/` · ⚠️ 2~4단계 카드 실측 전 · 강사 시연 폴더(`basic_demo`)는 아직 직영 소재 · handout 새 파일 드라이브 업로드 전.
+- `master/research/` : master 참고 자료.
+- **master 가이드 v1.0 (11-06 첫 발행)**: `master/1step/` = 스스로 지키기 8단계(1 · 2 기억 · 3~5 훅 · 6 · 7 하네스 · 8 루프) · 진행 체크 키 `cc-master-1step-steps-v1` · 공개 `ax_study/claude-code-self-guard.html` · handout `정답_훅/`(protect.js · secret_check.js · settings.json) / `master/2step/` = 팀에 퍼뜨리기 7단계, **순서 = 슬랙 봇(1 · 2) → 플러그인(3~5) → 모드(6 · 7)**(11-06 사용자 · 옛 「플러그인 → 모드 → 슬랙 봇」 폐기) · 키 `cc-master-2step-steps-v1` · 공개 `ax_study/claude-code-team-share.html` · handout `정답_봇/` · `정답_플러그인/cs-harness-market/`(validate 통과) · `정답_커맨드/cs-report.md`. **소재 = advance 2step 의 cs_practice 를 그대로 이어받는다**(11-06 사용자 · 기획서의 옛 「직영 리포트」 폐기). 두 가이드의 CSS · JS 는 advance 2step 가이드 틀 그대로. ⚠️ 카드 실측 전 · 봇 실제 DM · 짝 설치 미실측 · handout 드라이브 업로드 완료(11-06 · `upload_basic_handout.py master/1step|master/2step dry|apply` → AI-AX-Study › master › 1step `1KA6_U2BJor2_gp2GYeJz6YIvLL6lKozn` · 2step `19CdpT6rNvHc4wiaZuqZ00hQz0PeIlup4` · 가이드 HTML 은 안 올림).
+- **(11-05 사용자 확정) advance 2step · master 구성의 정본 = 기획서** `advance/2step/advance_2step_기획.html` · `master/1step/master_1step_기획.html` · `master/2step/master_2step_기획.html` (HTML 만 · 직접 고친다). advance 2step = 팀 꾸리기(에이전트 정의 · 서브 · 에이전트 팀 · 판단표) · master 1step = 스스로 지키기(Auto Memory · 훅 · 하네스 · 루프) · master 2step = 팀에 퍼뜨리기(유삐 같은 슬랙 봇 → 플러그인 → 모드 · 11-06 순서 변경). **확정 구성에 없는 스택과 권한 · 보안은 교육과정에서 제외한다** — `claude -p` 무인 실행 · 스케줄러 출근표 · 결근 대비 · 룰 · 허용 목록 · Supabase · Playwright 테스트 · 카카오 PlayMCP · 그래프 엔지니어링을 다시 넣지 않는다. advance 2step 가이드 = **v3.2(11-05 · 팀 꾸리기 5단계 · 진행 체크 키 `cc-adv-trial-steps-v2`) · 실습 소재 = 가상 학부모 문의 15건 답변(11-05 사용자 D안 · 직영 리포트 소재 폐지)** · 실습 폴더 `cs_practice`(워크스페이스 바로 아래 · `문의.txt` · `응대규정.md` · `응대규정_옛판.md`) · 에이전트 `cs-reply` · 3 · 4단계 오류 = 옛 판 규정 → 문의 4 · 9 · 13 만 틀림(세 조항만 다르게 짰다 · 문의를 고치면 정답표 대조부터) · handout 정답 = `정답_응대담당.md` · `정답표_문의답변.txt`(**실습 폴더 밖** = 에이전트가 못 읽게) · `팀켜기.txt` · 옛 직영 소재 파일 = `archive/advance_2step_data소재.261105/` · ⚠️ 2~4단계 카드 실측 전 · 강사 시연 폴더(`basic_demo`)는 아직 직영 소재 · handout 새 파일 드라이브 업로드 전.
 - 가이드 안 PART · 단계 번호 · 앵커 · 진행 체크 저장 키는 명칭 변경만으로 바꾸지 않는다.
 - (11-01 사용자) basic 1step · advance 2step 의 스킬 · 에이전트 위치 = **워크스페이스 폴더(basic_data 바로 위)의 `.claude`**. 워크스페이스 이름은 교육생마다 달라 가이드에 `claude_work` 같은 폴더 이름 · 예시를 쓰지 않는다 — 「basic_data 바로 위 폴더」 · 「워크스페이스의 `.claude\…`」로 적는다. 팀 플래그 `settings.local.json` 은 실습 폴더에 둔다(basic = basic_data · advance 2step = cs_practice, 11-05).
-- 빌드·발행 경로의 기준은 `tools/courses.json` 이다. 표준 인자는 `starter-1step`, `starter-2step`, `basic-1step`, `basic-2step`, `advance-1step`, `advance-2step` 이다. 이전 도구 인자는 호환용 별칭으로만 지원한다.
+- 빌드·발행 경로의 기준은 `tools/courses.json` 이다. 표준 인자는 `starter-1step`, `starter-2step`, `basic-1step`, `basic-2step`, `advance-1step`, `advance-2step`, `master-1step`, `master-2step` 이다. 이전 도구 인자는 호환용 별칭으로만 지원한다.
 
 ## 폴더 역할
 
@@ -31,7 +32,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - `tools/` : 실행 python 은 Python312. **스크립트는 한 벌이고 과정을 인자로 받는다**(`과정-단계`, 기본 `starter-1step`). 과정이 늘어도 복제하지 않는다.
   - 구글 문서: `gdoc_dump.py <문서ID> <출력.json>` = 탭 포함 구조 덤프(.txt 동시 생성). `gdoc_apply_260915*.py`·`gdoc_apply_260916.py <문서ID> dry|apply` = 회차별 적용본(재실행하면 매칭 0건으로 중단되므로 새 수정은 복사해서 목록만 바꿔 쓴다. b 는 행 추가·같은 문단 여러 개, c 는 행 삭제, 260916 은 문단 뒤 줄 추가 + **행 삭제를 한 건씩** 지원). **행을 여러 개 지울 때 한 배치로 보내면 뒤쪽 표의 시작 인덱스가 밀려 `Invalid table start location` 으로 실패한다** — 한 건 보내고 다시 읽는다. `gdoc_images.py` = 문서 속 이미지 추출.
   - 촬영: `shot.py`(창 조작·캡처), `shots_finalize.py <raw 폴더> [starter|basic]`(자르기·가림, 원본 raw 필요 = starter raw 는 이미 삭제됨).
-  - 드라이브: `upload_handout.py dry|apply` = `starter/1step/handout` 만 올린다. **basic은 `upload_basic_handout.py 1step|2step dry|apply`**(09-30) → 드라이브 「basic 준비물」 폴더 `1JOGuo57D-ZtolZSu_FaJiaizTN48mi_g` 의 1step · 2step 하위 폴더(도메인 편집 권한). **1step 폴더 바로 아래는 열사전 · 실습 데이터만, 나머지는 하위 `참고자료`**(10-06 사용자 · 스크립트 `TOP` 이 정한다 · 로컬 handout 은 평평). 가이드 HTML 은 올리지 않는다. 실습 데이터 · 정답표는 `make_basic_data.py <직영통합_export_YYYYMMDDhhmm.csv>` 로 다시 만든다(**10-05 사용자: 학생명 · 교사명 · 학생코드 원본 그대로** — 기간 · 센터만 거른다 · 첫 열 no = BOM 대비). **연도를 박아 두지 않는다(10-03)** — 파일 이름 날짜로 기간(직전 3개월 + 1년 전 같은 3개월) · 기준 연도 · 센터 · 열사전 첫 줄을 계산한다. 다시 만든 뒤엔 직영 대시보드와 대조하고 드라이브(`upload_basic_handout.py`)까지 올린다.
+  - 드라이브: `upload_handout.py dry|apply` = `starter/1step/handout` 만 올린다. **basic은 `upload_basic_handout.py 1step|2step dry|apply`**(09-30) · master 는 같은 스크립트에 `master/1step` · `master/2step`(11-06) → 드라이브 「basic 준비물」 폴더 `1JOGuo57D-ZtolZSu_FaJiaizTN48mi_g` 의 1step · 2step 하위 폴더(도메인 편집 권한). **1step 폴더 바로 아래는 열사전 · 실습 데이터만, 나머지는 하위 `참고자료`**(10-06 사용자 · 스크립트 `TOP` 이 정한다 · 로컬 handout 은 평평). 가이드 HTML 은 올리지 않는다. 실습 데이터 · 정답표는 `make_basic_data.py <직영통합_export_YYYYMMDDhhmm.csv>` 로 다시 만든다(**10-05 사용자: 학생명 · 교사명 · 학생코드 원본 그대로** — 기간 · 센터만 거른다 · 첫 열 no = BOM 대비). **연도를 박아 두지 않는다(10-03)** — 파일 이름 날짜로 기간(직전 3개월 + 1년 전 같은 3개월) · 기준 연도 · 센터 · 열사전 첫 줄을 계산한다. 다시 만든 뒤엔 직영 대시보드와 대조하고 드라이브(`upload_basic_handout.py`)까지 올린다.
     starter 2step 배포 파일 5개(프롬프트 txt · 정답_출퇴근 · 정답_폰미리보기 · 정답_서버_웹앱.gs · 정답_index.html — v1.11 에서 정답_서버.gs 는 내림·휴지통)는 09-27 **`AI-AX-Setup/2step`** 폴더(`1cvehjggzeg0WDNa3nBlQbAQCoUEIyPFp`, 상위 권한 상속 = 도메인 전체 편집)에 손으로 올렸다(md5 일치). 스크립트 대상이 아니므로 **handout 을 고치면 여기도 같은 이름으로 교체**한다.
   - 인쇄용 PDF: `md2pdf.py <문서.md>` = 마크다운을 A4 PDF 로. 판(폰트·CSS·playwright 렌더)은
     `AX_source/tools/pdfdoc.py` 를 빌려 쓴다 — 같은 회사 문서로 보이게 하려는 것이라 **CSS 를 따로 들지 않는다.**
@@ -118,7 +119,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - 1step 형태는 starter과 같은 **자기주도 링크**다. 옆에서 봐 줄 사람이 없으므로 주제마다
   「이게 되면 통과」 한 줄과 「안 되면 여기부터」 3줄이 반드시 있어야 한다.
 - 진행 체크 저장 키는 `cc-basic-steps-v1` 로 starter(`cc-guide-steps-v12`)과 분리한다. 같이 쓰면 체크가 어긋난다.
-- **starter 본문의 PART 번호·단계 번호는 건드리지 않는다.** starter에 더하는 것은 PART 7 표의 내용 · 링크뿐이다(10-16 v1.19 = 표 전체 교체, 번호는 그대로).
+- **starter 본문의 PART 번호·단계 번호는 건드리지 않는다.** (11-06 v1.26 사용자: PART 7 「다음 단계」 미리 보기 표를 지웠다 · 번호는 그대로 · PART 7 자리는 비워 둔다)
   (`AX_source/out/20260916/회차유형.json` 이 starter PART·단계 번호를 그대로 적어 두고 있어, 번호가 밀리면 그 기획서가 조용히 낡는다)
 - (26-10-12) 이 과정을 따라 맞추던 `test/AX_Adoption/AI1step/` 은 폴더째 삭제됐다 — 따라오는 폴더는 이제 없다.
 - 기획서는 `basic/1step/basic_1step_기획.html` · `basic/2step/basic_2step_기획.html` (HTML 만 · md · pdf 없음, 10-07)
@@ -160,7 +161,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - **드라이브 사본 2개**(`AX_클로드코드&CLI 1step_09.15_백업_260916`·`_테스트_260916`)가 남아 있다. 구글 문서를 더는 안 쓰기로 했으니 확인 뒤 휴지통으로 옮긴다.
 - **10단계 캡처 2장은 옛 프롬프트로 찍은 화면이다.** 재촬영하지 않고 캡션에 「2단계·작업 폴더 규칙 부분」이라고 적어 두었다. 다시 찍으려면 `CLAUDE_CONFIG_DIR` 로 별도 설정 폴더를 잡는다(실제 사용자 폴더의 전역 CLAUDE.md 를 덮어쓰면 안 된다).
 - 빈 `Desktop\claude_work` 폴더가 남아 있다(지우려 했으나 잠겨 있었다). 다음 촬영에 그대로 쓰면 된다.
-- starter PART 7 「다음 단계」 표 = 기술스택표 기준(basic = basic · 중급 = advance · 고급 = master · 10-16 v1.19). 열린 가이드만 링크한다 — **advance 1step · master 를 발행하면 「(준비 중)」 을 링크로 바꾼다.** 과정 구성이 바뀌면 이 표도 같이 고친다.
+- starter 에는 다음 과정 미리 보기 표가 없다(11-06 v1.26 사용자 삭제). 과정 구성이 바뀌어도 starter 는 고치지 않는다 — 되살리지 말 것.
 
 ## 다시 할 때 볼 것
 - **1step 시연 화면은 `바탕화면\교육용.bat` 더블클릭**이면 뜬다(사본: `tools/교육용.bat`). `Code.exe -n` 으로 `Desktop\claude_work` 를 **새 창**에 연다.
