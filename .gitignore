@@ -55,7 +55,7 @@ client_secret*
 *.local.js
 settings.local.json
 # 비밀값·개인정보·5MB 초과로 걸린 파일
-/basic/1step/basic_demo/.claude/settings.local.json
+/advance/2step/adv2_demo/cs_practice/.claude/settings.local.json
 /master/1step/handout/정답_훅/secret_check.js
 /master/2step/handout/정답_플러그인/cs-harness-market/plugins/cs-harness/hooks/secret_check.js
 /starter/2step/commute_app/code.gs

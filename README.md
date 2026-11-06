@@ -79,7 +79,7 @@ AX_study/
 │  ├─ 1step/          web/ · handout/
 │  └─ 2step/          web/ · handout/ · commute_app/ · 기획서
 ├─ basic/
-│  ├─ 1step/          web/ · handout/ · basic_demo/ · 기획서
+│  ├─ 1step/          web/ · handout/ · 기획서
 │  └─ 2step/          web/ · handout/ · 기획서
 ├─ advance/
 │  ├─ 1step/          web/ · handout/ · 기획서
