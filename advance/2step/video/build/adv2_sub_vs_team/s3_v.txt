@@ -1,0 +1,9 @@
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team/s3_0.png'
+duration 7.000
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team/s3_1.png'
+duration 5.152
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team/s3_2.png'
+duration 7.840
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team/s3_3.png'
+duration 10.456
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team/s3_3.png'

@@ -25,9 +25,9 @@ CSS = f"""*{{margin:0;box-sizing:border-box}}body{{width:{W}px;height:{H}px;font
 .box{{position:absolute;width:300px;height:110px;border-radius:20px;background:#fff;border:4px solid #CBD5E1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:38px;font-weight:700}}
 .box small{{font-size:24px;font-weight:400;color:#64748B}}
 .box.main{{border-color:#1D4ED8;background:#EFF6FF}} .box.on{{border-color:#F59E0B;box-shadow:0 0 0 8px #FDE68A}}
-svg{{position:absolute;inset:0}}
+svg{{position:absolute;inset:0;z-index:2}}
 .log{{margin:0 60px;background:#0F172A;border-radius:18px;padding:22px 30px;height:404px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}}
-.log div{{font-family:Consolas,'D2Coding',{FONT};font-size:29px;color:#CBD5E1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.log div{{font-family:Consolas,'D2Coding',{FONT};font-size:27px;color:#CBD5E1;white-space:normal;line-height:1.35}}
 .log div.new{{color:#FDE047;font-weight:700}} .log .h{{color:#94A3B8;font-size:24px}}
 .title{{display:flex;flex-direction:column;justify-content:center;align-items:center;height:{H}px;gap:36px;text-align:center}}
 .title h1{{font-size:96px;color:#1D4ED8}} .title div{{font-size:46px;max-width:1500px;line-height:1.45}} .title .sub{{font-size:34px;color:#64748B}}
@@ -54,7 +54,7 @@ def arrow_svg(pos, a, b, color):
     import math
     L = math.hypot(x2 - x1, y2 - y1) or 1
     ux, uy = (x2 - x1) / L, (y2 - y1) / L
-    x1, y1, x2, y2 = x1 + ux * 120, y1 + uy * 70, x2 - ux * 130, y2 - uy * 75
+    x1, y1, x2, y2 = x1 + ux * 165, y1 + uy * 70, x2 - ux * 175, y2 - uy * 95
     return (f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" stroke="{color}" stroke-width="10" '
             f'stroke-linecap="round" marker-end="url(#h)"/>')
 
@@ -99,6 +99,14 @@ def main():
     sil = work / "sil.wav"
     if not sil.exists():
         run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", str(GAP), str(sil)])
+    def mp3_of(sc, i, st):
+        return work / f"{sc['id']}_{i}_{hashlib.md5((VOICE + st['say']).encode()).hexdigest()[:8]}.mp3"
+
+    async def all_tts():  # Playwright sync API 가 이벤트 루프를 잡으므로 음성을 먼저 다 만든다
+        for sc in d["scenes"]:
+            for i, st in enumerate(sc["steps"]):
+                await tts(st["say"], mp3_of(sc, i, st))
+    asyncio.run(all_tts())
     from playwright.sync_api import sync_playwright
     parts, timeline, t0 = [], [], 0.0
     with sync_playwright() as p:
@@ -106,8 +114,7 @@ def main():
         for sc in d["scenes"]:
             vl, al, secs = [], [], []
             for i, st in enumerate(sc["steps"]):
-                mp3 = work / f"{sc['id']}_{i}_{hashlib.md5((VOICE + st['say']).encode()).hexdigest()[:8]}.mp3"
-                asyncio.run(tts(st["say"], mp3))
+                mp3 = mp3_of(sc, i, st)
                 s = dur(mp3) + GAP; secs.append(s)
                 png = work / f"{sc['id']}_{i}.png"
                 pg.set_content(page(sc, i)); pg.wait_for_timeout(120); pg.screenshot(path=str(png))
