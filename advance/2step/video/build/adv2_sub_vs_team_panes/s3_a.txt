@@ -1,0 +1,8 @@
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s3_0_01a075be.mp3'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/sil.wav'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s3_1_901744fc.mp3'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/sil.wav'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s3_2_cbb2d119.mp3'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/sil.wav'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s3_3_99ae7478.mp3'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/sil.wav'

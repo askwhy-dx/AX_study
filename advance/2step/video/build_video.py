@@ -59,8 +59,47 @@ def arrow_svg(pos, a, b, color):
             f'stroke-linecap="round" marker-end="url(#h)"/>')
 
 
+PANE_COL = {"gray": "#475569", "blue": "#1D4ED8", "magenta": "#A21CAF", "green": "#15803D", "yellow": "#B45309", "cyan": "#0E7490"}
+PANE_CSS = """.pbody{position:relative;height:984px}
+.pane{position:absolute;background:#0B0F19;border:3px solid #1E293B;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.pane.on{border-color:#FDE047;box-shadow:0 0 0 4px rgba(253,224,71,.35)}
+.ph{height:48px;flex:none;display:flex;align-items:center;padding:0 18px;color:#fff;font-size:26px;font-weight:700}
+.ph small{font-weight:400;opacity:.85;margin-left:12px;font-size:22px}
+.pl{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:10px 16px;gap:6px;overflow:hidden}
+.pl div{font-family:Consolas,'D2Coding','Malgun Gothic',monospace;font-size:23px;line-height:1.3;color:#94A3B8}
+.pl div.new{color:#FDE047;font-weight:700} .pl div.msg{color:#E2E8F0} .pl div.msg.new{color:#FDE047}
+.pl .idle{color:#475569;font-style:italic}"""
+
+
+def panes_page(sc, upto):
+    v = sc["visual"]; ps = v["panes"]
+    steps = sc["steps"][: upto + 1]
+    lines = {p["id"]: [] for p in ps}
+    for i, st in enumerate(steps):
+        for who, text in st.get("ev", []):
+            lines[who].append((text, i == upto))
+    focus = set(steps[-1].get("focus", []))
+    right = [p for p in ps if p["id"] != "메인"]; main = next(p for p in ps if p["id"] == "메인")
+    def box(p, x, y, w, h):
+        body = "".join(f"<div class='{'msg ' if t.startswith(('✉', '[')) else ''}{'new' if n else ''}'>{html.escape(t)}</div>" for t, n in lines[p["id"]][-14:])
+        if not lines[p["id"]]: body = "<div class='idle'>일을 받으면 여기에 보입니다…</div>"
+        return (f"<div class='pane{' on' if p['id'] in focus else ''}' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px'>"
+                f"<div class='ph' style='background:{PANE_COL[p['color']]}'>@{html.escape(p['label'])}<small>{html.escape(p.get('role', ''))}</small></div>"
+                f"<div class='pl'>{body}</div></div>")
+    n = len(right); gap = 14; top = 14; avail = 984 - top * 2
+    h = (avail - gap * (n - 1)) // n
+    out = box(main, 24, top, 1000, avail)
+    for i, p in enumerate(right):
+        out += box(p, 1040, top + i * (h + gap), 856, h)
+    mode = v.get("mode", "sub")
+    return (f"<html><head><style>{CSS}{PANE_CSS}</style></head><body style='background:#020617'><div class='top {mode}'><span>{html.escape(v['title'])}</span>"
+            f"<small>{html.escape(v.get('note', ''))}</small></div><div class='pbody'>{out}</div></body></html>")
+
+
 def page(sc, upto):
     v = sc["visual"]
+    if v["type"] == "panes":
+        return panes_page(sc, upto)
     if v["type"] == "title":
         return (f"<html><head><style>{CSS}</style></head><body><div class='title'><h1>{html.escape(v['title'])}</h1>"
                 f"<div>{html.escape(v.get('sub', ''))}</div><div class='sub'>{html.escape(v.get('foot', ''))}</div></div></body></html>")

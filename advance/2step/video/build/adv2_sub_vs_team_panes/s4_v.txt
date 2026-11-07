@@ -1,0 +1,3 @@
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s4_0.png'
+duration 15.616
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s4_0.png'

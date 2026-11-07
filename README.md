@@ -161,6 +161,7 @@ AX_study/
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-07 | **master 1step 가이드 v1.1 — 번외 「칸 화면 훅」 (사용자).** PART 2 끝 번호 없는 단계: 서브 · 팀원을 부를 때(PreToolUse · Agent) 훅 `agent_panes.js` 가 Windows Terminal 창을 열고 담당마다 칸을 더해 `pane.js` 로 실시간 표시(공식 tmux 분할 모드는 Windows Terminal · VS Code 미지원이라 대신). 받을 파일 `정답_훅` 에 agent_panes.js · pane.js · 칸화면_설정.json 추가 → 드라이브 업로드. 단계 번호 · 진행 체크 그대로. advance 2step 강사 시연 bat 도 같은 칸 화면으로 바꿈(서브 · 팀 실행 확인) · 시연 영상 칸 화면판 추가 |
 | 2026-11-06 | **starter 1step 가이드 v1.26 — PART 7 「다음 단계」 삭제 (사용자).** 다음 과정 미리 보기 표를 통째로 지웠다(다른 PART 번호는 그대로). 표 안에 있던 「화면 기준」 각주는 PART 5 끝으로 옮겼다. 재발행. |
 | 2026-11-06 | **master handout 드라이브 게시 · advance 2step 가이드 버그 수정 · AX_source 기획서 발행 (사용자).** `upload_basic_handout.py` 가 `master/1step` · `master/2step` 도 받게 해 드라이브 AI-AX-Study › master › 1step(3개) · 2step(10개)에 올림. advance 2step `guide.src.html` 의 정규식 찌꺼기 `\1` · `\2` 3곳 복구(4단계 「팀 회의」 항목 · 복사 상자 · PART 4 막혔을 때 섹션) → 재발행. AX_source 20261116 · 20261123 기획서 PDF 발행(`--plan`). |
 | 2026-11-06 | **master 1step · 2step 가이드 v1.0 첫 발행 (사용자).** master 2step 순서를 **슬랙 봇 → 플러그인 → 모드**로 바꾸고(1 · 2 봇 · 3~5 플러그인 · 6 · 7 상태줄 · `/cs-report`) 1step(기억 · 훅 · 하네스 · 루프 8단계)과 함께 가이드로 만듦. 소재 = advance 2step 의 가상 학부모 문의(`cs_practice`). 받을 파일 = 1step `정답_훅`(가짜 입력 9건 통과) · 2step `정답_봇` · `정답_플러그인`(`claude plugin validate` 통과) · `정답_커맨드`. `courses.json` 에 `master-1step` · `master-2step` 추가. 기획서 2편 · AX_source 회차 20261116 · 20261123 `회차유형.json` 맞춤. ⚠️ 카드 실측 전 · handout 드라이브 업로드 전 |

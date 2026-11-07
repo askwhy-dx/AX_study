@@ -1,0 +1,17 @@
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_0.png'
+duration 10.816
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_1.png'
+duration 5.440
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_2.png'
+duration 10.120
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_3.png'
+duration 9.088
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_4.png'
+duration 7.264
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_5.png'
+duration 6.664
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_6.png'
+duration 6.592
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_7.png'
+duration 9.280
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2_7.png'

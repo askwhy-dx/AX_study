@@ -1,0 +1,5 @@
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s0.mp4'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s1.mp4'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s2.mp4'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s3.mp4'
+file 'C:/Users/User/Desktop/test/AX_study/advance/2step/video/build/adv2_sub_vs_team_panes/s4.mp4'
