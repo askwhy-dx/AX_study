@@ -42,7 +42,7 @@ starter 2step 은 웹 앱 과정 하나로 운영합니다. 교육생에게는 �
 | basic 1step | [스킬과 에이전트](https://jichang999-dotcom.github.io/tes2/ax_study/claude-code-skills-agents.html) |
 | basic 2step | [외부 데이터 연결](https://jichang999-dotcom.github.io/tes2/ax_study/claude-code-external-data.html) |
 | advance 1step | [자동화](https://jichang999-dotcom.github.io/tes2/ax_study/claude-code-automation.html) |
-| advance 2step | [AI 직원 만들기](https://jichang999-dotcom.github.io/tes2/ax_study/claude-code-agent-team.html) |
+| advance 2step | [팀 꾸리기](https://jichang999-dotcom.github.io/tes2/ax_study/claude-code-agent-team.html) |
 
 ### 과정 키워드
 
@@ -161,6 +161,10 @@ AX_study/
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-08 | **advance 1step 가이드 v2.32 (사용자).** 단계마다 확인 아래 주의 · 팁 상자를 「주의사항 (개수)」 접힌 카드 하나로 묶음(1~10 · 12~15단계 · 기존 접힌 카드는 그대로). 백업 `archive/advance_1step_guide.src.html.261108b.bak` |
+| 2026-11-08 | **advance 1step 가이드 v2.31 — 1 · 7~10단계 프롬프트 = 11단계처럼 [입력] 칸 (사용자).** 1단계 = 프로젝트 폴더(비우면 git_practice 만) · 더 뺄 것 · Git 이름 · 메일 칸, 후보 고르기 · 「좋아」 대기 삭제 / 7 · 8단계 = 리포 이름 칸 / 9단계 = 내 업무 칸 / 10단계 = 저장소 주소 · 스킬 이름 칸. 안전장치(이미 저장소면 멈춤 · 데이터 · 개인정보면 멈춤 · 로그인은 사람 · origin 다르면 멈춤 · 위험한 줄이면 멈춤)는 고정 문구로 유지. 단계 번호 · 진행 체크 키 그대로 · ⚠️ 바뀐 카드 실측 전. 백업 `archive/advance_1step_guide.src.html.261108.bak` · `archive/CLAUDE_advance_1step_가이드.html.261108.bak` |
+| 2026-11-08 | **advance 2step 가이드 v4.1 — 1~4단계 = 사용법 체험 · 5단계 = 어떤 업무에 쓸지 (사용자).** 3단계 = 서브 띄우기 · 챙겨서 넘기기(싱글 카드 뺌) · 4단계에 팀원에게 직접 말 걸기 · 「팀은 대화형에서만」 경고 추가 · 확인을 조작 확인으로. 5단계 「어떤 업무에 써 볼까 — 기본은 싱글」 = 근거(공식 문서 팀 약 7배 · Anthropic 3~10배) · 판단 순서 3단 · 업무 추천 표(싱글 / 서브 맥락 보호 · 넓게 훑기 · 검산 / 팀) · 내 업무 카드. 실측 표 팀 행 = `-p` 조건 표기(이름 붙인 서브끼리 쪽지). 정답표 [3] · 기획서 결정 G 같은 날. 백업 `archive/*.261108.bak` |
+| 2026-11-07 | **advance 2step 가이드 v4.0 — 3 · 4단계 소재를 담당별로 나뉜 문의로 (사용자).** 소재 실측 9가지(`advance/2step/소재실측/`) 중 결과가 갈린 것은 정보가 나뉜 일 하나뿐이라(서브 얽힌 문의 0/5 · 싱글 · 팀 대부분 맞음) 3단계 = ① 싱글 ② 서브 셋에게 자기 파일만 ③ 메인이 「같은 학부모 목록」을 넘겨 나누기 · 4단계 = 팀원 A · B · C 가 서로 직접 묻기로 바꿈. 옛 판 규정 검산은 3 · 4단계에서 뺌(싱글도 스스로 찾음). handout `cs_practice/담당별/` · `정답표_담당별문의.txt` 추가(기존 파일 그대로 = master 1 · 2step 이 계속 씀). 시작 전 비유 · 5단계 판단표 · 실측 표 · 맡길 업무 표 수정. 기획서 같은 날 반영. 백업 `archive/advance_2step_guide.src.html.261107.bak` |
 | 2026-11-07 | **master 1step 가이드 v1.1 — 번외 「칸 화면 훅」 (사용자).** PART 2 끝 번호 없는 단계: 서브 · 팀원을 부를 때(PreToolUse · Agent) 훅 `agent_panes.js` 가 Windows Terminal 창을 열고 담당마다 칸을 더해 `pane.js` 로 실시간 표시(공식 tmux 분할 모드는 Windows Terminal · VS Code 미지원이라 대신). 받을 파일 `정답_훅` 에 agent_panes.js · pane.js · 칸화면_설정.json 추가 → 드라이브 업로드. 단계 번호 · 진행 체크 그대로. advance 2step 강사 시연 bat 도 같은 칸 화면으로 바꿈(서브 · 팀 실행 확인) · 시연 영상 칸 화면판 추가 |
 | 2026-11-06 | **starter 1step 가이드 v1.26 — PART 7 「다음 단계」 삭제 (사용자).** 다음 과정 미리 보기 표를 통째로 지웠다(다른 PART 번호는 그대로). 표 안에 있던 「화면 기준」 각주는 PART 5 끝으로 옮겼다. 재발행. |
 | 2026-11-06 | **master handout 드라이브 게시 · advance 2step 가이드 버그 수정 · AX_source 기획서 발행 (사용자).** `upload_basic_handout.py` 가 `master/1step` · `master/2step` 도 받게 해 드라이브 AI-AX-Study › master › 1step(3개) · 2step(10개)에 올림. advance 2step `guide.src.html` 의 정규식 찌꺼기 `\1` · `\2` 3곳 복구(4단계 「팀 회의」 항목 · 복사 상자 · PART 4 막혔을 때 섹션) → 재발행. AX_source 20261116 · 20261123 기획서 PDF 발행(`--plan`). |

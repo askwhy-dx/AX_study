@@ -1,5 +1,5 @@
 """basic 준비물을 공유 드라이브 폴더에 올린다.
-python upload_basic_handout.py 1step|2step|master/1step|master/2step dry|apply
+python upload_basic_handout.py 1step|2step|master/1step|master/2step|advance/2step dry|apply
 (11-06) master/<편> = master/<편>/handout → 드라이브 AI-AX-Study › master › <편> (폴더 없으면 만든다).
 basic/<편>/handout 의 파일(가이드 HTML 제외)을 드라이브 「basic 준비물」/<편> 폴더에 올린다. 하위 폴더도 같은 이름으로 만든다.
 같은 이름이 있으면 내용만 교체(파일 ID·링크 유지), 없으면 새로 만든다. 같은 이름이 2개 이상이면 중단. 지우지는 않는다."""
@@ -36,14 +36,17 @@ def folder_id(parent, name):
     return d.files().create(body={'name': name, 'parents': [parent], 'mimeType': 'application/vnd.google-apps.folder'}, fields='id', supportsAllDrives=True).execute()['id']
 
 
-if PART.startswith('master/'):
-    FOLDERS[PART] = folder_id(MASTER, PART.split('/')[1])
+ADVANCE = '1sBcijkJZP-fsI0agpUvKu12Gk6DNWiWD'  # AI-AX-Study › advance (11-08 advance/2step 추가)
+if PART.startswith(('master/', 'advance/')):
+    FOLDERS[PART] = folder_id(MASTER if PART.startswith('master/') else ADVANCE, PART.split('/')[1])
 
 for base, dirs, files in os.walk(ROOT):
     rel = os.path.relpath(base, ROOT)
     for name in sorted(files):
         if name.startswith('CLAUDE_') and name.endswith('.html'):
             continue  # 가이드는 공개 링크로 본다
+        if name.startswith('정답표_'):
+            continue  # 11-08 사용자: 정답 대조 안 함 · 정답표는 로컬 강사 참고용(드라이브엔 안 올림)
         parts = [] if rel == '.' else rel.split(os.sep)
         if PART == '1step' and (parts or name not in TOP):
             parts = [REF] + parts  # 10-06 사용자: 교육 폴더 바로 아래는 열사전 · 실습 데이터만, 나머지는 참고자료
