@@ -140,7 +140,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - 사용자가 「빼 달라」고 한 내용은 Update Notes 에서도 흔적을 남기지 않는다(PART 8 = 세션 자료 절 · 09-17 삭제, 되살리지 않는다). AX_source 기획서 · 덱 공개 URL 은 가이드에 링크하지 않는다.
 
 **설치 (7단계 · 설치 ZIP)**
-- 설치 오류 2종: PowerShell **실행 정책**(`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`) · `irm` **인증서 신뢰 실패**(npm 경로가 대안). 이 PC 는 `LocalMachine = Unrestricted` 라 재현되지 않는다.
+- 설치 오류 2종: PowerShell **실행 정책**(`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`) · `irm` **인증서 신뢰 실패**(11-08 공식 문서 순서로 교체: TLS 1.2 → winget → npm `config set allow-scripts` + `install -g` → IT 프록시 인증서). 이 PC 는 `LocalMachine = Unrestricted` 라 재현되지 않는다.
 - ZIP 작업 원본은 `C:\Users\User\Downloads\입문과정설치파일\` (Desktop 원본은 없다). 다시 말 때 **파일을 ZIP 루트에 · `.bak` 빼고**(python `zipfile`). 드라이브에 새로 올리면 파일 ID 가 바뀌므로 가이드는 폴더 링크만 쓴다. 드라이브 권한이 도메인 전체 writer 다.
 - `install.ps1` = UTF-8 **BOM** + LF, `.bat` = ASCII + CRLF(한글 금지). VS Code User Setup 은 **승격하지 않는다**. ZIP 안에서 바로 실행하면 실패한다. 실제 설치 구간은 아직 미검증.
 
@@ -181,7 +181,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - (2.1.287 실측 · 10-02) **`/agents` 마법사는 없어졌다** — 입력하면 (removed) 안내만 나온다. 에이전트는 Claude 에게 말로 만들게 하고(파일 위치를 카드에 적는다), 목록은 다시 켠 뒤 **말로 「이 프로젝트에서 쓸 수 있는 에이전트 목록 보여 줘」**(3/3). ⚠️ **`/list-agents` 는 만든 에이전트 목록이 아니다** — 지금 돌고 있는 서브 · 팀원 · 다른 세션(메시지 보낼 대상)만 보여 준다(10-03 사용자 실측으로 정정). basic 1step 11단계가 이 방식이다.
 - (10-03 대시보드 역산 · 사용자 확인) **basic 제외 프로그램은 부분 일치 9종 `셔틀 · 차량 · 주도 · 클리 · 유형별 · 실험복 · 가방 · 클린업 · 무료`** — 직영 대시보드도 패턴 일부(클리 → 클리커 연구소, 주도 → 자기주도)로 뺀다. 「자기」 · 「유형」 · 「실험」 은 빼지 않는다(넣으면 대시보드와 어긋남). 202507~09 · 202607~09 중 대시보드 5개 달 전부 일치. 정답표는 대시보드가 기준이다.
 - (10-03 사용자 실측) **에이전트 `tools` 줄엔 `Bash, PowerShell` 을 둘 다 적는다.** Git Bash 가 없는 PC 는 Claude Code 실행 도구가 PowerShell 이라 `Bash` 만 주면 에이전트가 명령을 하나도 못 돌린다. 둘 다 적어도 오류 없이 있는 쪽을 쓴다(이 PC 실측). 이 PC 는 Bash 가 있어 `claude -p` 검증으로는 못 잡는다.
-- (10-02 실측) 대화 중에 새로 만든 스킬 · 에이전트 파일은 **켜 둔 창의 `/skills` · 목록에 안 나온다** — `exit` → `claude` 로 다시 켜야 보인다(`/clear` 로는 안 된다).
+- (10-02 실측) 대화 중에 새로 만든 스킬 · 에이전트 파일은 **켜 둔 창의 `/skills` · 목록에 안 나온다** — `exit` → `claude` 로 다시 켜야 보인다(`/clear` 로는 안 된다). ⚠️ 11-08 공식 문서: 이미 있던 skills · agents 폴더에 넣은 것은 바로 반영, **세션 중 그 폴더가 처음 생겼을 때만** 재시작 · `/reload-skills` 필요 — 가이드 문구도 그렇게 고침(실습은 폴더가 처음 생기므로 재시작 안내 유지).
 - (10-02 실측) 실습 폴더에 기준이 적힌 파일(열사전 등)이 있으면 Claude 가 **묻지 않아도 읽고 먼저 적용한다** — 「기준 없이 해 보기」 단계를 두려면 그 기준을 폴더 파일에 넣지 않는다.
 - `claude -p` 로 카드를 검증할 때 `.claude/` 아래 쓰기는 승인 창이 없어 막힌다 — 스크래치 폴더에서만 `--permission-mode bypassPermissions` 로 돌린다(교육생에게는 권하지 않는다).
 - Shift+Tab 은 모드 순환 키다. Pro·Max·Team 은 auto 로 시작해 auto → manual → accept edits → plan 순. 「한 번 = 플랜 모드」로 쓰지 않는다.
