@@ -100,7 +100,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 ## basic 과정 (basic) — 제작 중 (2026-09-18 착수)
 
 - ⚠️ **09-29 4차 개정 — 아래 옛 문구보다 기획서가 우선한다.** starter처럼 **1step → 2step 두 편**이다.
-  1step = **PART 3 스킬 만들기**(09-29 중급에서 올라옴, 소재 미정) + 싱글 에이전트 + 다듬기 + **PART 9 GitHub 가입(회사 메일) · 스킬 찾아 받아 쓰기**(`meeting-minutes`). **1step PART 는 1 부터**(0 없음) · PART 1 = 숙제 체크(starter 2step 숙제 HTML) · PART 2 = 시작 전.
+  1step = **PART 3 스킬 만들기**(09-29 advance 에서 올라옴, 소재 미정) + 싱글 에이전트 + 다듬기 + **PART 9 GitHub 가입(회사 메일) · 스킬 찾아 받아 쓰기**(`meeting-minutes`). **1step PART 는 1 부터**(0 없음) · PART 1 = 숙제 체크(starter 2step 숙제 HTML) · PART 2 = 시작 전.
   2step = **1step 프로젝트 · 에이전트를 그대로 이어서** 1단계 강사 시연(완성된 서브 · 팀) → 서브 A/B 비교 → 다시 시키기 → **에이전트 팀**(팀원끼리 소통, 실험 기능 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` · 프로젝트 `settings.local.json` 에만 켜고 끝에 끈다 · `claude -p` 로는 팀이 안 생겨 카드 3회 검증 불가).
   **09-29 5차 반영(외부 강의 대조, 기획서 §2-5)**: 1step PART 2 `.claude` 폴더 지도 · PART 3 스킬 = 대화로 먼저 · description(무엇+언제+할 말) · 트리거 테스트 3종 · 안 되면 여기부터 · PART 5 `/agents` 마법사 · PART 7 판단 3질문 · **PART 9 마무리 = 추천 스킬 brainstorming 하나만**(superpowers 플러그인 전체 아님 · 수정본 정본 `test/.claude/skills/brainstorming`). **룰(rules)은 같은 날 사용자 지시로 master 로 이관**(결정 H) — basic 판단표는 두 칸 · 2step 네 칸 그대로. 기술스택 xlsx 도 맞췄다(advance 커스텀 커맨드 → 스킬+훅, master 에 룰 · 스킬 설계). 도구 읽기만 · 모델 기본값은 제안.
   공통 소재 = 가상 회의록. 「스킬 1 PART · 에이전트 4 PART」 · 「PART 4 가 핵심」 · 2step 트랙 3개 안은 폐기. 백업 `archive/초급_기획.md.260929.bak`·`260929b.bak`.
@@ -113,7 +113,7 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
   **교육생이 비교표를 자기 손으로 채운다.** 이 비교가 PART 6 판단표의 근거다.
 - **PART 5 는 「보고 다시 시키기」까지 간다**(09-18, 기획서 결정 F). 서브를 부르는 쪽(부모)도
   **과정을 못 봤다**는 것이 함정이라, 무엇을 근거로 판정하느냐를 **일꾼의 말 / 산출물 / 검산기** 3단으로 가른다.
-  **basic은 산출물까지, 검산기는 중급이다.** 이 선을 넘으면 범위가 샌다. PART 는 늘리지 않는다.
+  **basic은 산출물까지, 검산기는 advance 다.** 이 선을 넘으면 범위가 샌다. PART 는 늘리지 않는다.
 - **실습 소재는 교육생이 자기 업무를 가져온다**(사용자 결정 09-18). 그래서 자료에는 완성된 예제가 아니라
   **틀 + 고를 업무의 조건 + 완성 기준**을 싣는다. 캡처는 우리가 가상 소재로 찍는다.
 - 1step 형태는 starter과 같은 **자기주도 링크**다. 옆에서 봐 줄 사람이 없으므로 주제마다
@@ -187,5 +187,5 @@ Claude Code 1step 자료를 관리하는 폴더다. README.md 는 팀 공유용�
 - Shift+Tab 은 모드 순환 키다. Pro·Max·Team 은 auto 로 시작해 auto → manual → accept edits → plan 순. 「한 번 = 플랜 모드」로 쓰지 않는다.
 - `--dangerously-skip-permissions` 는 보호 경로 쓰기를 포함한 안전 검사까지 끈다. basic 1step에서 권하지 않는다.
 - git 이 아닌 폴더의 하위 폴더에서 켜도 상위 `.claude\skills` 가 로드된다 (test\AX_study 에서 실측).
-- git 관련 설명(메모리 공유 범위 등)은 중급 과정이라 basic 문서에 넣지 않는다.
+- git 관련 설명(메모리 공유 범위 등)은 advance 과정이라 basic 문서에 넣지 않는다.
 - (2.1.272 실측) 첫 실행 창 순서: 테마 → 로그인 방법 → 브라우저 승인 → 보안 안내 → 터미널 설정 → 폴더 신뢰(기본 선택 No, exit) → 새 화면 방식 제안. 첫 화면엔 이메일이 아닌 요금제가 나온다. auto 모드는 파일 생성 허용을 묻지 않는다. `/config` 는 `lang` 검색 → Enter 두 번 → korean.

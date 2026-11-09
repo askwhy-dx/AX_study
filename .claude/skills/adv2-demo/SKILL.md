@@ -1,6 +1,6 @@
 ---
 name: adv2-demo
-description: advance 2step 1단계 강사 시연. 가상 학부모 문의 15건을 서브 에이전트(작성 → 검산 → 고침, 메인이 옮김)와 에이전트 팀(replier · policy · parent 가 직접 주고받음)으로 차례로 돌리고, 둘 다 누가 누구에게 무엇을 말했는지 화면에 한 줄씩 찍어 보여 준다. 「어드밴스2step 시연」「강사 시연 시작」「/adv2-demo sub」「/adv2-demo team」이라고 할 때 쓴다. 교육생 실습이나 일반 문의 답변 요청에는 쓰지 않는다.
+description: advance 2step 1단계 강사 시연. 가상 학부모 문의 15건을 서브 에이전트(작성 → 검산 → 고침, 메인이 옮김)와 에이전트 팀(replier · policy · parent 가 직접 주고받음)으로 차례로 돌리고, 둘 다 누가 누구에게 무엇을 말했는지 화면에 한 줄씩 찍어 보여 준다. 「advance 2step 시연」「어드밴스2step 시연」「강사 시연 시작」「/adv2-demo sub」「/adv2-demo team」이라고 할 때 쓴다. 교육생 실습이나 일반 문의 답변 요청에는 쓰지 않는다.
 ---
 
 # advance 2step 강사 시연 — 서브 vs 팀, 주고받기를 보여 준다

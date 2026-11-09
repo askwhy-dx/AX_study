@@ -12,7 +12,7 @@
 | 사용 스킬 `google-api` | `C:\Users\User\.claude\skills\google-api\SKILL.md` (사용자 폴더 — 어느 폴더에서나 뜸) | 파일 편집 |
 
 이 폴더에는 매뉴얼 사본을 두지 않는다. 매뉴얼 정본은 Claude Docs 다.
-⚠️ **회사판 프롬프트 1 · 2 는 초급 체험 가이드에도 사본이 있다**(26-10-26 · `basic/2step/web/guide.src.html` 의 `#chrome` 선택 단계 · 공개 링크). 회사판 프롬프트 1 · 2 를 고치면 그 가이드도 고치고 발행한다.
+⚠️ **회사판 프롬프트 1 · 2 는 basic 2step 가이드에도 사본이 있다**(26-10-26 · `basic/2step/web/guide.src.html` 의 `#chrome` 선택 단계 · 공개 링크). 회사판 프롬프트 1 · 2 를 고치면 그 가이드도 고치고 발행한다.
 
 ## 매뉴얼 구조 (현재)
 
