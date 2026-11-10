@@ -1,0 +1,7 @@
+cs_practice 에 원본 보호 훅을 만들어 줘.
+- 파일: cs_practice/.claude/hooks/protect.js · 설정은 cs_practice/.claude/settings.json 의 hooks
+- 언제: PreToolUse · matcher 는 Edit|Write|MultiEdit|Bash|PowerShell
+- 무엇을: 문의.txt · 응대규정.md · 응대규정_옛판.md 를 고치거나 지우려 하면 exit 2 로 막고, 이유를 한국어 한 줄로 돌려준다. 읽기(열어 보기 · 복사해 오기)는 막지 않는다
+- Node 로 쓴다(.bat · .ps1 은 쓰지 않는다). 설정의 명령은 node .claude/hooks/protect.js
+- 다른 설정과 전역 설정은 건드리지 않는다
+만든 뒤 가짜 입력으로 「막힘 1번 · 통과 1번」을 직접 시험해서 결과를 보여 줘.

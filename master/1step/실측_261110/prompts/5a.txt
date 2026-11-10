@@ -1,0 +1,6 @@
+cs_practice 에 비밀정보 검사 훅을 더해 줘.
+- cs_practice 가 Git 저장소가 아니면 git init 하고, .gitignore 에 .env 와 답변/ 을 넣는다
+- 파일: cs_practice/.claude/hooks/secret_check.js · 같은 settings.json 의 PreToolUse 에 matcher Bash|PowerShell 로 추가한다 (원본 보호 훅은 그대로 둔다)
+- git commit 명령일 때만 검사한다: 올라갈 파일(스테이징된 파일 + 같은 명령의 git add 로 들어갈 파일)에 .env 파일 · 슬랙 웹훅 주소(hooks.slack.com) · xoxb- 같은 토큰 · sk- 같은 키 모양이 있으면 exit 2 로 막고, 파일 이름과 이유를 한국어로 돌려준다
+- Node 로 쓴다. 설정의 명령은 node .claude/hooks/secret_check.js
+만든 뒤 가짜 입력으로 「막힘 1번 · 통과 1번」을 시험해서 보여 줘.
