@@ -172,6 +172,7 @@ starter ~ advance 2step 가이드 내용은 사용자 컨펌 완료(11-12). 남�
 
 | 날짜 | 내용 |
 |---|---|
+| 2026-11-12 | **master 1step 가이드 v1.5 — 실습 자료를 이번 차시 드라이브에서 (사용자).** handout 에 `cs_practice/`(문의 · 응대규정 · 옛판 · `.claude/agents/cs-reply.md`) · `정답_문의답변.txt` 추가 → 드라이브 master › 1step 업로드(5파일 md5 ok). 준비물 = 드라이브 링크 · 이미 cs_practice 가 있으면 `cs_practice_adv` 로 바꿔 두기 · 막혔을 때 문구 수정. 에이전트를 실습 폴더 안에 둬도 잡힘(git init 해도 잡힘 · `claude -p` 확인). 백업 `archive/master_1step_guide.src.html.261112n.bak` |
 | 2026-11-12 | **master 1step 가이드 v1.4 — PART 1 기억 다시 씀 (사용자).** Auto Memory 설명 그림(인라인 SVG) · 1단계 = 확정 안 된 보강 기준(월 1회)을 지나가듯 말하면 기억에 저절로 쌓임 · 2단계 = 그 기억 때문에 문의 4 가 틀림 → 원인 찾기 → 기억 삭제 + CLAUDE.md 규칙 두 줄(규정 기준 · 서명) → 다시 답하면 맞음 · 정리 「Auto Memory 의 문제점과 CLAUDE.md 를 고쳐야 하는 이유」 + PART 2 훅 연결 · 6단계 기억 층 · 정리 표 맞춤. 단계 수 · 진행 체크 키 그대로. 실측 `claude -p` = 틀린 답 9/9 · 2단계 끝까지 3/3(`master/1step/실측_261112_기억.md`). 백업 `archive/master_1step_guide.src.html.261112m.bak` |
 | 2026-11-12 | **basic 2step 실측 · starter 2step 회사 계정 배포 확인 컨펌 (사용자).** basic 2step 새 2 · 3단계 카드 · Playwright 처음 설치 실측과 starter 2step 회사 계정 구글 시트 · Apps Script 배포 확인을 완료 처리 |
 | 2026-11-12 | **basic 2step 가이드 v1.35 컨펌 (사용자).** 2단계 본인 계정 · 3단계 브라우저 MCP 2개 + 구글 뉴스 요약 구성 확정. 남은 일 = 새 2 · 3단계 카드 실측 |
